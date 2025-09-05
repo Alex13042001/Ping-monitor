@@ -9,3 +9,9 @@ for host in hosts:
         print(f"{host} está disponible ✅")
     else:
         print(f"{host} no responde ❌")
+with open("resultados.txt", "w") as f:
+    for host in hosts:
+        respuesta = os.system(f"ping -c 1 {host}")
+        estado = "Disponible ✅" if respuesta == 0 else "No responde ❌"
+        print(f"{host}: {estado}")
+        f.write(f"{host}: {estado}\n")
