@@ -3,8 +3,23 @@ import subprocess
 import re
 import csv
 
-# Lista de hosts a comprobar (puedes cambiar o pedir al usuario que meta los suyos)
-hosts = ["8.8.8.8", "1.1.1.1", "www.google.com", "www.github.com"]
+# Lista de hosts por defecto
+hosts_defecto = ["8.8.8.8", "1.1.1.1", "www.google.com", "www.github.com"]
+
+# Preguntar al usuario si quiere añadir hosts extra
+entrada = input("Introduce hosts adicionales separados por comas (o deja vacío para continuar): ").strip()
+
+if entrada:
+    hosts_usuario = [h.strip() for h in entrada.split(",") if h.strip()]
+    hosts = hosts_defecto + hosts_usuario
+else:
+    hosts = hosts_defecto
+
+print("\n✅ Comprobando los siguientes hosts:")
+for h in hosts:
+    print("-", h)
+
+print("\n🔄 Iniciando comprobación...\n")
 
 # Detectar sistema operativo
 param = "-n" if platform.system().lower() == "windows" else "-c"
