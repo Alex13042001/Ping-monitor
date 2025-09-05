@@ -15,3 +15,4 @@ with open("resultados.txt", "w") as f:
         estado = "Disponible ✅" if respuesta == 0 else "No responde ❌"
         print(f"{host}: {estado}")
         f.write(f"{host}: {estado}\n")
+hosts = input("Introduce los hosts separados por comas: ").split(",")
