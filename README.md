@@ -37,21 +37,57 @@ cd ping-monitor
 python monitor.py
 
 4. **Opcional: añade hosts personalizados separados por comas cuando se te pida:**
+
+
 Introduce hosts adicionales separados por comas (o deja vacío para continuar): www.openai.com, 192.168.1.1...
 
 5. **Salida ejemplo en consola:**
-8.8.8.8 está disponible ✅ | Tiempo de respuesta: 20 ms
-1.1.1.1 está disponible ✅ | Tiempo de respuesta: 18 ms
-www.google.com está disponible ✅ | Tiempo de respuesta: 25.3 ms
-www.github.com está disponible ✅ | Tiempo de respuesta: 42.1 ms
-www.openai.com está disponible ✅ | Tiempo de respuesta: 30 ms
-192.168.1.1 no responde ❌ <!-- No responde ya que es una IP privada -->
+
+
+
+```8.8.8.8 está disponible ✅ | Tiempo de respuesta: 20 ms```
+
+
+
+```1.1.1.1 está disponible ✅ | Tiempo de respuesta: 18 ms```
+
+
+
+```www.google.com está disponible ✅ | Tiempo de respuesta: 25.3 ms```
+
+
+
+```www.github.com está disponible ✅ | Tiempo de respuesta: 42.1 ms```
+
+
+
+```www.openai.com está disponible ✅ | Tiempo de respuesta: 30 ms```
+
+
+
+```192.168.1.1 no responde ❌``` <!-- No responde ya que es una IP privada -->
 
 6. **Resultados en resultados.csv:**
 Host,Estado,Tiempo (ms)
-8.8.8.8,Disponible,20
-1.1.1.1,Disponible,18
-www.google.com,Disponible,25
-www.github.com,Disponible,42
-www.openai.com,Disponible,30
-192.168.1.1,No responde,-
+
+
+8.8.8.8, Disponible, 20ms
+
+
+1.1.1.1, Disponible, 18ms
+
+
+www.google.com, Disponible, 25ms
+
+
+www.github.com, Disponible, 42ms
+
+
+www.openai.com, Disponible, 30ms
+
+
+192.168.1.1, No responde
+
+## 🌟 Autor
+
+Alejandro Rodríguez Arevalillo
